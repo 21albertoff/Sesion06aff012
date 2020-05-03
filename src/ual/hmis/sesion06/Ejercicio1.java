@@ -1,7 +1,16 @@
 package ual.hmis.sesion06;
 
+/**
+ * @author Alberto Fuentes
+ */
+
 public class Ejercicio1{
 	
+/**
+* Transforma los numeros
+* @param x
+* @return resultado
+*/
 	public int transformar (int x) {
 		int resultado = 0;
 		if (x % 2 == 0) // % Resto de una división entre enteros (mod)
