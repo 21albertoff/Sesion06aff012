@@ -7,7 +7,7 @@ package ual.hmis.sesion06;
 public class Ejercicio1 {
 
 /**
-* Transforma los numeros
+* Transforma los numeros.
 * @param x
 * @return resultado
 */
