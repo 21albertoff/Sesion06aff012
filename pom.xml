@@ -27,7 +27,11 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M4</version>
 			</plugin>
-
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.2.0</version>
+			</plugin>
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -75,6 +79,9 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>3.2.0</version>
+				<configuration>
+					<source>8</source>
+				</configuration>			
 			</plugin>
 
 
@@ -86,7 +93,7 @@
 					<locales>es,en</locales>
 				</configuration>
 			</plugin>
-			
+
 		</plugins>
 	</build>
 
@@ -148,16 +155,12 @@
 				<version>3.0.0</version>
 			</plugin>
 
-			<plugin>
+ 			<plugin>
 				<groupId>org.owasp</groupId>
 				<artifactId>dependency-check-maven</artifactId>
 				<version>5.3.2</version>
 				<configuration>
 					<skipTestScope>false</skipTestScope>
-					<formats>
-						<format>HTML</format>
-						<format>XML</format>
-					</formats>
 				</configuration>
 				<reportSets>
 					<reportSet>
@@ -168,10 +171,11 @@
 				</reportSets>
 			</plugin>
 
+
 			<plugin>
 				<groupId>com.github.spotbugs</groupId>
 				<artifactId>spotbugs-maven-plugin</artifactId>
-				<version>3.1.12</version>
+				<version>4.0.0</version>
 				<configuration>
 					<effort>Max</effort>
 					<threshold>Low</threshold>
@@ -182,42 +186,17 @@
 						<plugin>
 							<groupId>com.h3xstream.findsecbugs</groupId>
 							<artifactId>findsecbugs-plugin</artifactId>
-							<version>1.9.0</version>
+							<version>1.10.1</version>
 						</plugin>
 					</plugins>
 				</configuration>
 			</plugin>
-			
-			 <plugin>
-                <groupId>org.owasp</groupId>
-                <artifactId>dependency‐check‐maven</artifactId>
-                <version>5.3.2</version>
-        <configuration>
-    <scanSet>
-        <fileSet>
-          <directory>${project.basedir}</directory>
-          <includes>
-<include>${project.basedir}/test/**/*.java</include>
-<include>${project.basedir}/src/**/*.java</include>
-     </includes>
-    </fileSet>
-    </scanSet>
-    </configuration>
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <report>aggregate</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
-            </plugin>
 
 		</plugins>
 	</reporting>
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-		
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
