@@ -12,7 +12,7 @@ pipeline {
     stage('Git fetch') { 
       steps {
         // Get some code from a GitHub repository
-        git 'https://github.com/21albertoff/Sesion0aff012.git'
+        git 'https://github.com/21albertoff/Sesion06aff012.git'
       }
     }
     stage('Compile, Test, Package') { 
