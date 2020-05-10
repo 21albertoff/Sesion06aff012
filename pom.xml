@@ -10,6 +10,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		
 		<sonar.projectKey>21albertoff_Sesion06aff012</sonar.projectKey>
+  		<sonar.organization>21albertoff</sonar.organization>
   		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
   		<sonar.java.libraries>target/*.jar</sonar.java.libraries>
 	</properties>
